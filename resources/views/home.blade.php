@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <a href="#"><button type="button" class="btn btn-default btn-lg btn-block">Gestion Des Animaux</button></a>
+                    <a href="{{ route('animals') }}"><button type="button" class="btn btn-default btn-lg btn-block">Gestion Des Animaux</button></a>
                     <br>
                     <a href="#"><button type="button" class="btn btn-default btn-lg btn-block">Gestion Des RDV</button></a>
                 </div>

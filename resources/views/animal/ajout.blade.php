@@ -16,66 +16,38 @@
 
                     <form method="POST" action="{{ route('add_pet') }}">
                         @csrf
-
+                        <input type="hidden" name="user_id" value="{{auth()->id()}}"/>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nom Animal') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                                <input id="name" type="text" class="form-control" name="name" required>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
+                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="type" type="text" class="form-control" name="type" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Mot de passe') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmation mot de passe') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="role" class="form-control" name="role">
-                                    <option>Eleveur</option>
-                                    <option>Veterainaire</option>
+                                <select id="type" class="form-control" name="type">
+                                    <option>Domestique</option>
+                                    <option>Sauvage</option>
                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="specie" class="col-md-4 col-form-label text-md-right">{{ __('Espece Animale') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="specie" type="text" class="form-control" name="specie" required>
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('S\'inscrire') }}
+                                    {{ __('Ajouter') }}
                                 </button>
                             </div>
                         </div>
