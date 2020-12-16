@@ -25,7 +25,7 @@
                                 <td>{{$animal->name}}</td>
                                 <td>{{$animal->type}}</td>
                                 <td>{{$animal->specie}}</td>
-                                <td><a class="btn btn-primary" href="{{route('delete_pet',['id' => $animal->id])}}" role="button">Supprimer</a></td>
+                                <td><a class="btn btn-danger" href="{{route('delete_pet',['id' => $animal->id])}}" role="button"><i class="fa fa-trash"></i>Supprimer</a></td>
                             </tr>
                         @endforeach
                     </table>

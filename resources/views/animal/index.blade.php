@@ -16,7 +16,7 @@
 
                     <a href="{{ route('create_pet') }}"><button type="button" class="btn btn-default btn-lg btn-block">Ajouter Un Animal</button></a>
                     <br>
-                    <a href="#"><button type="button" class="btn btn-default btn-lg btn-block">Supprimer Un Animal</button></a>
+                    <a href="{{ route('list_pet') }}"><button type="button" class="btn btn-default btn-lg btn-block">Supprimer Un Animal</button></a>
                 </div>
             </div>
         </div>
