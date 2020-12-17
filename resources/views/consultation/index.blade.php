@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Accueil</div>
+                <div class="card-header">Gestion R.D.Vs</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,9 +14,9 @@
                         </div>
                     @endif
 
-                    <a href="{{ route('animals') }}"><button type="button" class="btn btn-default btn-lg btn-block">Gestion Des Animaux</button></a>
+                    <a href="{{ route('create_rdv') }}"><button type="button" class="btn btn-default btn-lg btn-block">Ajouter Un RDV</button></a>
                     <br>
-                    <a href="{{ route('consultations') }}"><button type="button" class="btn btn-default btn-lg btn-block">Gestion Des RDV</button></a>
+                    <a href="{{ route('list_rdv') }}"><button type="button" class="btn btn-default btn-lg btn-block">Annuler Un RDV</button></a>
                 </div>
             </div>
         </div>
